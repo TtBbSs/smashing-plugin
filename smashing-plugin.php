@@ -2,7 +2,7 @@
 /*
 	Plugin Name: A - TBS
 	Description: This is for updating your Wordpress plugin.
-	Version: 1.0.1
+	Version: 1.1.0
 	Author: TBS
 	Author URI: http://www.matthewray.com
 */

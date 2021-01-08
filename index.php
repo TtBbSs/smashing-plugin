@@ -1,0 +1,1 @@
+<?php /* SILINC IS GOLD */ ?>
