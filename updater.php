@@ -107,7 +107,7 @@ class Smashing_Updater {
 	public function plugin_popup( $result, $action, $args ) {
 
 		if( ! empty( $args->slug ) ) { // If there is a slug
-			
+
 			if( $args->slug == current( explode( '/' , $this->basename ) ) ) { // And it's our slug
 
 				$this->get_repository_info(); // Get our repo info
@@ -121,13 +121,13 @@ class Smashing_Updater {
 					'rating'						=> '100.0',
 					'num_ratings'				=> '10823',
 					'downloaded'				=> '14249',
-					'added'							=> '2016-01-05',
+					'added'							=> '2021-08-01',
 					'version'			=> $this->github_response['tag_name'],
 					'author'			=> $this->plugin["AuthorName"],
 					'author_profile'	=> $this->plugin["AuthorURI"],
 					'last_updated'		=> $this->github_response['published_at'],
-					'homepage'			=> $this->plugin["PluginURI"],
 					'short_description' => $this->plugin["Description"],
+					'homepage'			=> $this->plugin["PluginURI"],
 					'sections'			=> array(
 						'Description'	=> $this->plugin["Description"],
 						'Updates'		=> $this->github_response['body'],
