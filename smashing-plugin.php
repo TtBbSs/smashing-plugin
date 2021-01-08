@@ -2,7 +2,7 @@
 /*
 	Plugin Name: A - TBS
 	Description: Support plugin.
-	Version: 1.1.1
+	Version: 1.1.2
 	Author: TBS
 	Author URI: http://github.com/TtBbSs
 */
