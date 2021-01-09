@@ -34,8 +34,7 @@ function smashing_plugin_get_citat() {
 	shuffle($citats);
 	function get_random_citat($quote_id, $quote) {
 		$output = "";
-		$output = '<h1>' . $quote["quote"] . '.</h1>';
-		$output .= '<p>' . $quote["attribution"] . '</p>';
+		$output = '<h1 id="spcitat" title="'.$quote["attribution"].'">' . $quote["quote"] . '.</h1>';
 		return $output;
 	}
 	$random = $citats[array_rand($citats)];
