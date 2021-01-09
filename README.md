@@ -1,9 +1,9 @@
 # smashing-plugin
-1.2.0:
-* 30 citater
-
 1.2.1
 * Tilføjet opdaterings besked
+
+1.2.0:
+* 30 citater
 
 
 
