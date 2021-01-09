@@ -2,7 +2,7 @@
 /*
 	Plugin Name: A - TBS
 	Description: Citats.
-	Version: 1.2.6
+	Version: 1.2.7
 	Author: TBS
 	Author URI: http://github.com/TtBbSs
 */
@@ -47,7 +47,7 @@ function smashing_plugin_get_citat() {
 // This just echoes the chosen line, we'll position it later
 function smashing_plugin() {
 	$chosen = smashing_plugin_get_citat();
-	echo "<p id='spcitat'>$chosen</p>";
+	return $chosen;
 }
 
 // Now we set that function up to execute when the admin_notices action is called
