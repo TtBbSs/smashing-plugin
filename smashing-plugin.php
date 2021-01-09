@@ -1,9 +1,5 @@
 <?php
 /*
-	@package smashing-plugin
-	@version 1.2.1
-*/
-/*
 	Plugin Name: A - TBS
 	Description: Citats.
 	Version: 1.2.1
