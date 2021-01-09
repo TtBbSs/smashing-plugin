@@ -2,10 +2,14 @@
 /*
 	Plugin Name: A - TBS
 	Description: Citats.
-	Version: 1.2.4
+	Version: 1.2.5
 	Author: TBS
 	Author URI: http://github.com/TtBbSs
 */
+// Cache kontrol
+Header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+
+// Luk hvis ikke har tilladesle til at se denne fil
 if( ! class_exists( 'Smashing_Updater' ) ){
 	include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
 }
