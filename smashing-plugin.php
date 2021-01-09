@@ -2,7 +2,7 @@
 /*
 	Plugin Name: A - TBS
 	Description: Citats.
-	Version: 1.2.1
+	Version: 1.2.3
 	Author: TBS
 	Author URI: http://github.com/TtBbSs
 */
@@ -13,18 +13,20 @@ if( ! class_exists( 'Smashing_Updater' ) ){
 $updater = new Smashing_Updater( __FILE__ );
 $updater->set_username( 'TtBbSs' );
 $updater->set_repository( 'smashing-plugin' );
-/* */
+/*
 	$updater->authorize( '894642da381896244de2ff9abf2d74a9e323d221' ); // Your auth code goes here for private repos
-/* */
+*/
 $updater->initialize();
 
 
 function smashing_plugin_get_citat() {
 	$citats = array();
+
 	$citats[1] = array(
 		"quote" => "This here is a really good quote",
 		"attribution" => "Theodore Roosevelt"
 	);
+
 	shuffle($citats);
 	function get_random_citat($quote_id, $quote) {
 		$output = "";
