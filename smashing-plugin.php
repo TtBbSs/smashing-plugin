@@ -2,7 +2,7 @@
 /*
 	Plugin Name: A - TBS
 	Description: Citats.
-	Version: 1.2.7
+	Version: 1.3.0
 	Author: TBS
 	Author URI: http://github.com/TtBbSs
 */
@@ -45,13 +45,13 @@ function smashing_plugin_get_citat() {
 }
 
 // This just echoes the chosen line, we'll position it later
-function smashing_plugin() {
-	$chosen = smashing_plugin_get_citat();
-	return $chosen;
-}
+//function smashing_plugin() {
+//	$chosen = smashing_plugin_get_citat();
+//	return $chosen;
+//}
 
 // Now we set that function up to execute when the admin_notices action is called
-add_action( 'admin_notices', 'smashing_plugin' );
+add_action( 'admin_notices', 'smashing_plugin_get_citat' );
 
 // We need some CSS to position the paragraph
 function smashing_plugin_css() {
