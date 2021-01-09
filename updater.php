@@ -84,6 +84,12 @@ class Smashing_Updater {
 				$out_of_date = version_compare( $this->github_response['tag_name'], $checked[ $this->basename ], 'gt' ); // Check if we're out of date
 
 				if( $out_of_date ) {
+					function update_notice() { ?>
+						<div class="update-nag notice">
+							<p><?php echo "Der er en ny opdatering tilgængelig!"; ?></p>
+						</div>
+					<?php }
+					add_action( 'admin_notices', 'update_notice' );
 
 					$new_files = $this->github_response['zipball_url']; // Get the ZIP
 

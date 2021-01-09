@@ -1,1 +1,1 @@
-<?php /* SILINC IS GOLD */ ?>
+<?php /* silence is golden */ ?>

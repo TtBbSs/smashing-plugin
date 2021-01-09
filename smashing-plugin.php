@@ -1,12 +1,12 @@
 <?php
 /*
 	@package smashing-plugin
-	@version 1.2.0
+	@version 1.2.1
 */
 /*
 	Plugin Name: A - TBS
 	Description: Citats.
-	Version: 1.2.0
+	Version: 1.2.1
 	Author: TBS
 	Author URI: http://github.com/TtBbSs
 */
