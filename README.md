@@ -1,4 +1,7 @@
 # smashing-plugin
+1.2.2 --> 1.2.7
+* Bug fix
+
 1.2.1
 * Tilføjet opdaterings besked
 
