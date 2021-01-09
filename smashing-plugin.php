@@ -13,50 +13,30 @@ if( ! class_exists( 'Smashing_Updater' ) ){
 $updater = new Smashing_Updater( __FILE__ );
 $updater->set_username( 'TtBbSs' );
 $updater->set_repository( 'smashing-plugin' );
-/*
-	$updater->authorize( 'abcdefghijk1234567890' ); // Your auth code goes here for private repos
-*/
+/* */
+	$updater->authorize( '894642da381896244de2ff9abf2d74a9e323d221' ); // Your auth code goes here for private repos
+/* */
 $updater->initialize();
 
 
 function smashing_plugin_get_citat() {
-	/** These are the phrases of Stranger Things */
-	$phrases = "Mornings are for coffee and contemplation.
-							You shouldn’t like things because people tell you you’re supposed to.
-							Lando!
-							Friends don’t lie.
-							If anyone asks where I am, I’ve left the country.
-							Sometimes, your total obliviousness just blows my mind.
-							I’m stealthy, like a ninja.
-							I don’t care if anyone believes me.
-							Why are you keeping this curiosity door locked?
-							What’s at the X? Pirate treasure?
-							Am I dreaming, or is that you, Harrington?
-							Yeah, it’s me. Don’t cream your pants.
-							How do you know it’s not just a lizard?
-							Because his face opened up and he ate my cat!
-							Bitchin’
-							You smell that, Max? That’s actually shit. Cow shit.
-							I don’t see any cows.
-							Clearly you haven’t met the high school girls.
-							Bob Newby, superhero.
-							She will not be able to resist these pearls. *Purrs*
-							Yeah. Crazy together.
-							…It’s finger-lickin’ good
-							Will? What are you doing?
-							Hey guys, why are you headed towards the sound?
-							Just curious why all of a sudden you look like some MTV punk.
-							Dad? When Mom’s mad at you, how do you make her not mad?
-							I asked if you wanted to be my friend. And you said yes. You said yes. It was the best thing I’ve ever done.
-							Uhhh!
-							It’s going to be okay. Remember, Bob Newby, superhero.
-							I always thought stuff like this happened in movies and comic books.";
-
-	// Here we split it into lines
-	$phrases = explode( "\n", $phrases);
-
-	// And then randomly choose a line
-	return wptexturize( $phrases[ mt_rand( 0, count( $phrases ) - 1 ) ] );
+	$citats = array();
+	$citats[1] = array(
+		"quote" => "This here is a really good quote",
+		"attribution" => "Theodore Roosevelt"
+	);
+	shuffle($citats);
+	function get_random_citat($quote_id, $quote) {
+		$output = "";
+		$output = '<h1>' . $quote["quote"] . '.</h1>';
+		$output .= '<p>' . $quote["attribution"] . '</p>';
+		return $output;
+	}
+	$random = $citats[array_rand($citats)];
+// And then randomly choose a line
+	$citat_send = $random["quote"];
+	$citat_send .= $random["attribution"];
+	return $citat_send;
 }
 
 // This just echoes the chosen line, we'll position it later
