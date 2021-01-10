@@ -38,7 +38,6 @@ function smashing_plugin_get_citat() {
 		return $output;
 	}
 	$random = $citats[array_rand($citats)];
-	echo $citat_send;
 	// And then randomly choose a line
 	$citat_q = $random["q"];
 	$citat_a = $random["a"];
