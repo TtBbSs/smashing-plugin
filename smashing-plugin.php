@@ -27,21 +27,22 @@ function smashing_plugin_get_citat() {
 	$citats = array();
 
 	$citats[1] = array(
-		"quote" => "This here is a really good quote",
-		"attribution" => "Theodore Roosevelt"
+		"q" => "This here is a really good quote",
+		"a" => "Theodore Roosevelt"
 	);
 
 	shuffle($citats);
-	function get_random_citat($quote_id, $quote) {
+	function output_citat($attribution, $quote) {
 		$output = "";
-		$output = '<h1 id="spcitat" title="'.$quote["attribution"].'">' . $quote["quote"] . '.</h1>';
+		$output = '<h1 id="spcitat" title="' . $attribution . '">' . $quote . '.</h1>';
 		return $output;
 	}
 	$random = $citats[array_rand($citats)];
-// And then randomly choose a line
-	$citat_send = $random["quote"];
-	$citat_send .= $random["attribution"];
 	echo $citat_send;
+	// And then randomly choose a line
+	$citat_q = $random["q"];
+	$citat_a = $random["a"];
+	echo output_citat($citat_a, $citat_q);
 }
 
 // This just echoes the chosen line, we'll position it later
@@ -49,10 +50,6 @@ function smashing_plugin_get_citat() {
 //	$chosen = smashing_plugin_get_citat();
 //	return $chosen;
 //}
-
-// Now we set that function up to execute when the admin_notices action is called
-add_action( 'admin_notices', 'smashing_plugin_get_citat' );
-
 // We need some CSS to position the paragraph
 function smashing_plugin_css() {
 	// This makes sure that the positioning is also good for right-to-left languages
@@ -71,4 +68,6 @@ function smashing_plugin_css() {
 	";
 }
 
+// Now we set that function up to execute when the admin_notices action is called
+add_action( 'admin_notices', 'smashing_plugin_get_citat' );
 add_action( 'admin_head', 'smashing_plugin_css' );
