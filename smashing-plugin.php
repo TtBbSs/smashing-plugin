@@ -2,7 +2,7 @@
 /*
 	Plugin Name: A - TBS
 	Description: Citats.
-	Version: 1.3.1
+	Version: 1.4.0
 	Author: TBS
 	Author URI: http://github.com/TtBbSs
 */
