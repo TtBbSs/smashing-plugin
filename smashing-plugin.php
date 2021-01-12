@@ -9,7 +9,7 @@
 register_activation_hook( __FILE__, 'child_plugin_activate' );
 function child_plugin_activate() {
 	// Require parent plugin
-	if (!is_plugin_active( 'tbs-ad/tbs-ad.php') and current_user_can('activate_plugins')) {
+	if (!is_plugin_active( 'TBS/TBS.php') and current_user_can('activate_plugins')) {
 		// Stop activation redirect and show error
 		wp_die('Vi beklager! Dette plugin kræver at TBS hovedplugin er aktiveret! <br><a href="' . admin_url( 'plugins.php' ) . '">&laquo; Gå til Plugins</a>');
 	}
