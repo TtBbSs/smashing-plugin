@@ -246,6 +246,8 @@ function smashing_plugin_get_citat() {
 	$citat_q = $random["q"];
 	$citat_a = $random["a"];
 	echo output_citat($citat_a, $citat_q);
+	sleep(5);
+	smashing_plugin_get_citat();
 }
 
 // This just echoes the chosen line, we'll position it later
