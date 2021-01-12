@@ -11,7 +11,7 @@ function child_plugin_activate() {
 	// Require parent plugin
 	if (!is_plugin_active( 'TBS/TBS.php') and current_user_can('activate_plugins')) {
 		// Stop activation redirect and show error
-		wp_die('Vi beklager! Dette plugin kræver at TBS hovedplugin er aktiveret! <br><a href="' . admin_url( 'plugins.php' ) . '">&laquo; Gå til Plugins</a>');
+		wp_die('Vi beklager! Dette plugin kræver at TBS hovedplugin er aktiveret! <br><a href="' . admin_url( 'plugins.php' ) . '">&laquo; Gå til Plugins</a><br><a href="https://github.com/TtBbSs/TBS">Hent TBS hovedplugin her</a>');
 	}
 }
 
