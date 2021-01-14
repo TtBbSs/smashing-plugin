@@ -2,7 +2,7 @@
 /*
 	Plugin Name: A - TBS
 	Description: Citats.
-	Version: 1.4.3
+	Version: 1.4.4
 	Author: TBS
 	Author URI: http://github.com/TtBbSs
 */
@@ -252,11 +252,9 @@ function smashing_plugin_get_citat() {
 	}
 	$random = $citats[array_rand($citats)];
 	// And then randomly choose a line
-	$citat_q = $random["q"];
 	$citat_a = $random["a"];
+	$citat_q = $random["q"];
 	echo output_citat($citat_a, $citat_q);
-	sleep(5);
-	smashing_plugin_get_citat();
 }
 
 // This just echoes the chosen line, we'll position it later
